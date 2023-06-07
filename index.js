@@ -16,8 +16,8 @@ app.get("/", function (_, res) {
 
 function somaIngresso(quantidade) {
   var total;
-  var preco = 60;
-  var frete = 40;
+  var preco = 50;
+  var frete = 0;
   if (quantidade > 3){
     total = quantidade * preco;
     return total;

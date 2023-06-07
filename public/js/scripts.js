@@ -112,18 +112,18 @@ function ocultaBotao() {
 }
 
 function calculaTotal() {
-  precoIngresso = 60;
-  frete = 40;
+  precoIngresso = 50;
+  frete = 0;
   quantidade = parseInt(campoQuantidade.value);
-  if (quantidade > 3) { //FRETE GRATIS ACIMA DE 3 UNIDADES
-    precoIngresso = 60;
+  if (quantidade >= 3) { //FRETE GRATIS ACIMA DE 3 UNIDADES
+    //precoIngresso = 50;
     document.getElementById("valorIngressos").value = "R$ " + (quantidade * precoIngresso) + ",00";
     document.getElementById("valorFrete").value = "GRÁTIS!";
     document.getElementById("valorTotal").value = "R$ " + (quantidade * precoIngresso) + ",00";
     document.getElementById("valorTotal2").value = "R$ " + (quantidade * precoIngresso) + ",00";
   }  
   else if (quantidade < 3){ //FRETE FIXO ABAIXO DE 20 UNIDADES
-    precoIngresso = 60;
+    //precoIngresso = 50;
     document.getElementById("valorIngressos").value = "R$ " + (quantidade * precoIngresso) + ",00";
     document.getElementById("valorFrete").value = "R$ " + frete + ",00";
     document.getElementById("valorTotal").value = "R$ " + ((quantidade * precoIngresso) + frete) + ",00";
