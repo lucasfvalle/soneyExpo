@@ -11466,8 +11466,8 @@ p {
   }
 }
 header.masthead {
-  padding-top: 10.5rem;
-  padding-bottom: 6rem;
+  padding-top: 3rem;/*10.5rem;*/
+  padding-bottom: 3rem;
   text-align: center;
   color: #fff;
   background-image: url("../assets/img/header-bg.jpg");
@@ -11478,7 +11478,7 @@ header.masthead {
 }
 
 header.masthead .masthead-subheading {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-style: italic;
   line-height: 1.5rem;
   margin-bottom: 25px;
@@ -11491,11 +11491,16 @@ header.masthead .masthead-heading {
   margin-bottom: 2rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+.title-master{
+  font-size: 3.25rem;
+  font-weight: bold;
+  color: #ffc800;
+}
 
 @media (min-width: 768px) {
   header.masthead {
-    padding-top: 17rem;
-    padding-bottom: 20rem;
+    padding-top: 15rem;
+    padding-bottom: 10rem;
   }
   header.masthead .masthead-subheading {
     font-size: 2.25rem;
