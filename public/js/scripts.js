@@ -110,20 +110,39 @@ function ocultaBotao() {
   //document.getElementById("formEnviado").innerHTML = '<div class="fw-bolder">Compra realizada com sucesso!</div>'
   alert("Compra realizada com sucesso!")
 }
-
+/*
+Até 20 ingressos - R$50
+De 21 a 40 - R$48
+41 a 100 - R$45
+Acima de 100 - R$40
+*/
 function calculaTotal() {
   precoIngresso = 50;
   frete = 0;
   quantidade = parseInt(campoQuantidade.value);
-  if (quantidade >= 3) { //FRETE GRATIS ACIMA DE 3 UNIDADES
-    //precoIngresso = 50;
+  if (quantidade <= 20) { // PREÇO 50
+    precoIngresso = 50;
     document.getElementById("valorIngressos").value = "R$ " + (quantidade * precoIngresso) + ",00";
     document.getElementById("valorFrete").value = "GRÁTIS!";
     document.getElementById("valorTotal").value = "R$ " + (quantidade * precoIngresso) + ",00";
     document.getElementById("valorTotal2").value = "R$ " + (quantidade * precoIngresso) + ",00";
   }  
-  else if (quantidade < 3){ //FRETE FIXO ABAIXO DE 20 UNIDADES
-    //precoIngresso = 50;
+  else if (quantidade > 20 && quantidade <= 40){ // PREÇO 48 
+    precoIngresso = 48;
+    document.getElementById("valorIngressos").value = "R$ " + (quantidade * precoIngresso) + ",00";
+    document.getElementById("valorFrete").value = "GRÁTIS!";
+    document.getElementById("valorTotal").value = "R$ " + ((quantidade * precoIngresso) + frete) + ",00";
+    document.getElementById("valorTotal2").value = "R$ " + ((quantidade * precoIngresso) + frete) + ",00";
+  }
+  else if (quantidade > 40 && quantidade <= 100){ // PREÇO 45 
+    precoIngresso = 45;
+    document.getElementById("valorIngressos").value = "R$ " + (quantidade * precoIngresso) + ",00";
+    document.getElementById("valorFrete").value = "GRÁTIS!";
+    document.getElementById("valorTotal").value = "R$ " + ((quantidade * precoIngresso) + frete) + ",00";
+    document.getElementById("valorTotal2").value = "R$ " + ((quantidade * precoIngresso) + frete) + ",00";
+  }
+  else if (quantidade > 100){ // PREÇO 40
+    precoIngresso = 40;
     document.getElementById("valorIngressos").value = "R$ " + (quantidade * precoIngresso) + ",00";
     document.getElementById("valorFrete").value = "GRÁTIS!";
     document.getElementById("valorTotal").value = "R$ " + ((quantidade * precoIngresso) + frete) + ",00";
