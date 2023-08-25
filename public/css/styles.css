@@ -11894,3 +11894,9 @@ section#ingressos form#contactForm :-ms-input-placeholder {
   font-size: 0.9rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+
+.alerta{
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+}
