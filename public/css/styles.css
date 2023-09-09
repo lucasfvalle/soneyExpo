@@ -11897,6 +11897,7 @@ section#ingressos form#contactForm :-ms-input-placeholder {
 
 .alerta{
   padding: 1em;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: red;
+  /*background-color: rgba(0, 0, 0, 0.8);*/
   border-radius: 20px;
 }
