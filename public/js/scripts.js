@@ -122,9 +122,13 @@ De 21 a 40 ingressos: R$63,00 (cada)
 De 41 a 100 ingressos: R$60,00 (cada)
 */
 function calculaTotal() {
+  frete = 0;
+  quantidade = parseInt(campoQuantidade.value);
   let dataAtual = new Date();
   let dA1 = "16/05/2024"; // Limite
   let dA2 = "16/06/2024";
+  let dA3 = "16/07/2024";
+  let dA4 = "16/08/2024";
  
   /*
     <b>Pagamentos até 15/05: R$35,00 (cada)</b></br>
@@ -133,23 +137,32 @@ function calculaTotal() {
     <b>De 16/07 a 15/08: R$50,00 (cada)</b><br>
   */
 
-  let data1 = new Date(dA1.split('/').reverse().join('/'));
-  let data2 = new Date(dA2.split('/').reverse().join('/'));
-  let data3 = new Date(dA2.split('/').reverse().join('/'));
-  let data4 = new Date(dA2.split('/').reverse().join('/'));
+  let data1 = new Date(dA1.split('/').reverse().join('/')); // 16/05
+  let data2 = new Date(dA2.split('/').reverse().join('/')); // 16/06
+  let data3 = new Date(dA3.split('/').reverse().join('/')); // 16/07
+  let data4 = new Date(dA4.split('/').reverse().join('/')); // 16/08
 
   
 
   if(dataAtual < data1){ // Até 15/05
     precoIngresso = 35;
-    console.log("Data menor!")
-  }else{
-    console.log("Data maior")
+  }else if(dataAtual >= data1 && dataAtual < data2){
+    precoIngresso = 40;
+  }else if(dataAtual >= data2 && dataAtual < data3){
+    precoIngresso = 45;
+  }else if(dataAtual >= data3 && dataAtual < data4){
+    precoIngresso = 50;
+  }else if(dataAtual >= data4){
+    precoIngresso = 65;
   }
-
-
+  
+  document.getElementById("valorIngressos").value = "R$ " + (quantidade * precoIngresso) + ",00";
+  document.getElementById("valorFrete").value = "GRÁTIS!";
+  document.getElementById("valorTotal").value = "R$ " + (quantidade * precoIngresso) + ",00";
+  document.getElementById("valorTotal2").value = "R$ " + (quantidade * precoIngresso) + ",00";
+/*
   precoIngresso = 65;
-  frete = 0;
+ 
   quantidade = parseInt(campoQuantidade.value);
   if (quantidade <= 20) { // PREÇO 65
     precoIngresso = 65;
