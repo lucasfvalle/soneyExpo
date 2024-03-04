@@ -122,6 +122,22 @@ De 21 a 40 ingressos: R$63,00 (cada)
 De 41 a 100 ingressos: R$60,00 (cada)
 */
 function calculaTotal() {
+  let dataAtual = new Date();
+  let dA1 = "16/05/2024";
+  let dA2 = "15/06/2024";
+
+  let data1 = new Date(dA1.split('/').reverse().join('/'));
+  let data2 = new Date(dA2.split('/').reverse().join('/'));
+
+  
+
+  if(dataAtual < data1){
+    console.log("Data menor!")
+  }else{
+    console.log("Data maior")
+  }
+
+
   precoIngresso = 65;
   frete = 0;
   quantidade = parseInt(campoQuantidade.value);
