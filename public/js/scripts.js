@@ -123,15 +123,25 @@ De 41 a 100 ingressos: R$60,00 (cada)
 */
 function calculaTotal() {
   let dataAtual = new Date();
-  let dA1 = "16/05/2024";
-  let dA2 = "15/06/2024";
+  let dA1 = "16/05/2024"; // Limite
+  let dA2 = "16/06/2024";
+ 
+  /*
+    <b>Pagamentos até 15/05: R$35,00 (cada)</b></br>
+    <b>De 16/05 a 15/06: R$40,00 (cada)</b><br>
+    <b>De 16/06 a 15/07: R$45,00 (cada)</b><br>
+    <b>De 16/07 a 15/08: R$50,00 (cada)</b><br>
+  */
 
   let data1 = new Date(dA1.split('/').reverse().join('/'));
   let data2 = new Date(dA2.split('/').reverse().join('/'));
+  let data3 = new Date(dA2.split('/').reverse().join('/'));
+  let data4 = new Date(dA2.split('/').reverse().join('/'));
 
   
 
-  if(dataAtual < data1){
+  if(dataAtual < data1){ // Até 15/05
+    precoIngresso = 35;
     console.log("Data menor!")
   }else{
     console.log("Data maior")
