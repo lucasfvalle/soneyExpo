@@ -89,6 +89,8 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+/* */
+
 /* template novo */
 .card {
   padding: 30px 40px;
@@ -11446,20 +11448,28 @@ p {
     transition: font-size 0.3s ease-in-out;
   }
   #mainNav .navbar-brand img {
-    height: 2rem;
+    height: 3rem;
     transition: height 0.3s ease-in-out;
   }
+
   #mainNav.navbar-shrink {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 2rem;
+    /*padding-bottom: 1rem;*/
     background-color: #212529;
   }
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
   }
+  #mainNav.navbar-shrink .navbar-brand img {
+    height: 3rem;
+    transition: height 0.3s ease-in-out;
+  }
+.navbar-shrink img{
+  height: 1rem;
+}
   #mainNav.navbar-shrink .navbar-brand svg,
 #mainNav.navbar-shrink .navbar-brand img {
-    height: 1.5rem;
+    height: 2.5rem;
   }
   #mainNav .navbar-nav .nav-item {
     margin-right: 1rem;
@@ -11508,7 +11518,7 @@ header.masthead .masthead-heading {
 
 @media (min-width: 768px) {
   header.masthead {
-    padding-top: 15rem;
+    padding-top: 5rem;
     padding-bottom: 10rem;
   }
   header.masthead .masthead-subheading {
@@ -11790,7 +11800,7 @@ header.masthead .masthead-heading {
 }
 
 .img-brand {
-  height: 2.75rem;
+  height: 3.75rem;
 }
 
 section#contact {
